@@ -1,0 +1,224 @@
+/* variables */
+:root {
+    --primary-color: #0d44dc; /* blue-700 */
+    --primary-hover: #2563eb; /* blue-600 */
+    --danger-color: #dc2626;  /* red-600 */
+    --danger-hover: #ef4444;  /* red-500 */
+    --bg-light: #f9fafb;      /* gray-50 */
+    --text-main: #1f2937;     /* gray-800 */
+    --text-muted: #6b7280;    /* gray-500 */
+    --white: #ffffff;
+    --font-family: 'Inter', sans-serif;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-w-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+
+.navbar-left, .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-links a {
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+.nav-link:hover{
+    background-color: rgba(255, 255, 255, 0.395);
+}
+
+.greeting {
+    font-size: 0.875rem;
+}
+
+/* Buttons */
+
+.btn-primary { background-color: var(--primary-hover); color: var(--white); }
+.btn-primary:hover { background-color: #3b82f6; }
+.btn-danger { background-color: var(--danger-color); color: var(--white); }
+.btn-danger:hover { background-color: var(--danger-hover); }
+.btn-light { background-color: var(--white); color: var(--primary-color); }
+.btn-light:hover { background-color: #f3f4f6; }
+/* Styling Tombol Dasar (Base Button) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    border: none;
+    /* Membuat sudut melengkung halus (rounded) agar tidak kaku/kotak */
+    border-radius: 12px; 
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 1. Tombol Utama (Primary Button) - Tema Medis Modern */
+.btn-primary {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+}
+
+/* 2. Tombol Sekunder / Garis Tepi (Outline Button) */
+.btn-outline {
+    background-color: transparent;
+    color: #0284c7;
+    border: 2px solid #0284c7;
+}
+
+.btn-outline:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(2, 132, 199, 0.25);
+}
+
+/* 3. Tombol Akses Cepat / Fitur Layanan Hospital (Pill Style) */
+.btn-pill {
+    border-radius: 50px;
+    padding: 10px 24px;
+}
+
+/* Efek Fokus untuk Aksesibilitas */
+.btn:focus-visible {
+    outline: 3px solid rgba(2, 132, 199, 0.4);
+    outline-offset: 2px;
+}
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: #1f2937; /* gray-800 */
+    color: var(--white);
+    margin-top: 48px;
+    padding: 48px 0 24px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.footer-column h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-column p, .footer-column ul {
+    font-size: 0.875rem;
+    color: #9ca3af; /* gray-400 */
+    line-height: 1.5;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul a:hover {
+    color: var(--white);
+}
+
+.emergency-box {
+    background-color: var(--danger-color);
+    color: var(--white);
+    padding: 12px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.emergency-text {
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #374151; /* gray-700 */
+    padding-top: 24px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
